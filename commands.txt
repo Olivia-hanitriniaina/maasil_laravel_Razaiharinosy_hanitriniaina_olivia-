@@ -1,0 +1,20 @@
+Migration: php artisan make:migration create_articles_table --create=articles
+Model: php artisan make:model Article
+All: php artisan make:model Todo -mcr (migration, controller, resource)
+controller: php artisan make:controller HomeController --api
+
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Article extends Model
+{
+    //
+    
+    protected $table = 'articles';
+    protected $primaryKey = 'id_article';
+    public $timestamps = true;
+	protected $dateFormat = 'U';
+}
